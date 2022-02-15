@@ -25,7 +25,8 @@ for(let gap = arr.length / 2; Math.floor(gap) > 0; gap /= 2) {
 
 /* 第二种：knuth间隔计算 */
 let h = 1;
-// 计算当前最佳间隔距离
+// 计算当前最佳间隔距离 ps: 这里需要注意不能超过数组的三分之一长度
+
 while (h <= arr.length / 3) {
   h = 3 * h + 1;
 }
